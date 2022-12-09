@@ -29,10 +29,11 @@ export default function App() {
       <label>Year</label>
       <input type="text" value={year} name="year" onChange={e => setYear(e.target.value)} /><br/>
       <label>Poster</label>
+  
       <input type="text" value={poster} name="poster" onChange={e => setPoster(e.target.value)} />
       <button onClick={handleClick}>Search</button>
       <br/>
-      <img src={data.Poster} />
+      {data.Poster ? <img src={data.Poster} /> : "No Poster"}
     </div>
   );
 }
